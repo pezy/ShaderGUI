@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="load">../Icon/load.png</file>
+        <file>triangles.frag.shader</file>
+        <file>triangles.vert.shader</file>
+    </qresource>
+</RCC>
