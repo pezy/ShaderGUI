@@ -1,12 +1,10 @@
-#version 130
+#version 430 core
 
-//! [0]
 uniform vec4 color;
 
-out vec4 fragColor;
+out vec4 fColor;
 
 void main(void)
 {
-    fragColor = color;
+    fColor = color;
 }
-//! [0]

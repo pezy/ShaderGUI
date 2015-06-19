@@ -1,4 +1,4 @@
-#version 130
+#version 430 core
 
 //! [0]
 uniform mat4 mvpMatrix;

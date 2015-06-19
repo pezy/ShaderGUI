@@ -3,10 +3,10 @@
 
 #include "sgbasicgeometry_global.h"
 
-#include <QtOpenGL/QGLWidget>
-#include <QtOpenGL/QGLShaderProgram>
+#include <QtWidgets/QOpenGLWidget>
+#include <QtGui/QOpenGLShaderProgram>
 
-class SGBASICGEOMETRY_EXPORT SGBasicGeometryWidget : public QGLWidget
+class SGBASICGEOMETRY_EXPORT SGBasicGeometryWidget : public QOpenGLWidget
 {
     Q_OBJECT
 
@@ -22,7 +22,7 @@ protected:
 
 private:
     QMatrix4x4 m_matrix_;
-    QGLShaderProgram m_shader_program_;
+    QOpenGLShaderProgram m_shader_program_;
     QVector<QVector3D> m_vertices_;
 };
 

@@ -1,7 +1,6 @@
 #include "sgbasicgeometrywidget.h"
-#include "gl/GL.h"
 
-SGBasicGeometryWidget::SGBasicGeometryWidget(QWidget *parent) : QGLWidget(QGLFormat(), parent)
+SGBasicGeometryWidget::SGBasicGeometryWidget(QWidget *parent) : QOpenGLWidget(parent)
 {
 
 }
@@ -21,10 +20,10 @@ void SGBasicGeometryWidget::initializeGL()
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
 
-    qglClearColor(QColor(Qt::black));
+    glClearColor(0.0, 0.0, 0.0, 0.0);
 
-    m_shader_program_.addShaderFromSourceFile(QGLShader::Vertex, ":/triangles.vert");
-    m_shader_program_.addShaderFromSourceFile(QGLShader::Fragment, ":/triangles.frag");
+    m_shader_program_.addShaderFromSourceFile(QOpenGLShader::Vertex, ":/triangles.vert");
+    m_shader_program_.addShaderFromSourceFile(QOpenGLShader::Fragment, ":/triangles.frag");
     m_shader_program_.link();
 
     //m_vertices_ << QVector2D(-0.90, -0.90) << QVector2D(0.85, -0.90) << QVector2D(-0.90, 0.85) << QVector2D(0.90, -0.85) << QVector2D(0.90, 0.90) << QVector2D(-0.85, 0.90);
